@@ -1,0 +1,351 @@
+.innertopbar_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 135px;
+    height: 55px;
+    margin: 15px 0px 15px 25px;
+}
+
+.riot_static_logo:hover>path {
+    fill: red !important;
+}
+
+.dropdown_icon {
+    font-size: 20px;
+    color: gray;
+}
+
+.innertopbar_left:hover {
+    cursor: pointer;
+}
+
+.innertopbar_center {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 345px);
+    height: 55px;
+}
+
+.lol_gold_icon {
+    width: 35px;
+    height: 35px;
+}
+
+.innertopbar_center .redirect_tags {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 25px;
+}
+
+.innertopbar_center ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 17px;
+    width: fit-content;
+    height: 55px;
+    padding: 0px 9px 0px 9px;
+}
+
+.innertopbar_center ul li:nth-child(4) {
+    width: 125px;
+}
+
+.innertopbar_center ul li:hover {
+    cursor: pointer;
+}
+
+.innertopbar_center ul li a {
+    display: block;
+    width: auto;
+    color: whitesmoke;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: border-bottom 0.13s linear;
+}
+
+.innertopbar_center ul li .arrow_up_right {
+    font-size: 13px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.innertopbar_center>.redirect_tags li:hover>.dropdown_icon,
+.innertopbar_center>.redirect_tags li:hover>.arrow_up_right {
+    color: azure;
+}
+
+.innertopbar_center .redirect_tags>li:hover {
+    border-bottom: 2px solid turquoise;
+}
+
+.innertopbar_center ul li:last-child i {
+    font-size: 22px;
+    color: #7e7e7e;
+    vertical-align: -7px;
+}
+
+#list_more {
+    display: none;
+
+    &:hover>ul {
+        display: block;
+    }
+}
+
+#list_more>ul {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: fit-content;
+    background-color: #111111;
+    top: 53px;
+    left: 0px;
+    border-top: 2px solid turquoise;
+    z-index: 10;
+}
+
+#list_more>ul li {
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+#list_more:hover {
+    cursor: pointer;
+}
+
+.innertopbar_center ul #list_more:hover ul {
+    display: block;
+}
+
+.innertopbar_center ul #list_more ul li:hover {
+    background-color: rgba(245, 255, 250, 0.5);
+}
+
+.innertopbar_right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 25px;
+    height: 55px;
+    min-width: 310px;
+}
+
+.innertopbar_right #dehaze {
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    display: none;
+    width: auto;
+    height: auto;
+    padding: 7px;
+    border-radius: 100px;
+    background-color: rgba(180, 180, 180, 0.3);
+}
+
+.innertopbar_right .language_icon {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.innertopbar_right .language_icon:hover {
+    cursor: pointer;
+}
+
+.innertopbar_right .sign_in {
+    display: block;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    color: whitesmoke;
+    margin-left: 15px;
+    margin-right: 15px;
+    letter-spacing: 1.5px;
+}
+
+.innertopbar_right .sign_in:hover {
+    cursor: pointer;
+}
+
+.innertopbar_right .btn_play_now {
+    display: block;
+    width: 140px;
+    height: 35px;
+    padding-top: 10px;
+    background-color: #0bc4e2;
+    text-align: center;
+    margin-right: 25px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    color: whitesmoke;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.innertopbar_right .btn_play_now:hover {
+    background-color: #0ca4bb;
+}
+
+.intro_banner video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.intro_banner_front video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.intro_banner_front img {
+    position: absolute;
+    width: fit-content;
+    height: 200px;
+    max-width: 600px;
+    min-width: 350px;
+    top: 20%;
+}
+
+.intro_banner_front .outerline_banner {
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% + 20px);
+    z-index: 3;
+    animation: reveal 1.5s linear 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border: 1px solid rgb(145, 145, 145);
+        clip-path: polygon(0 0, calc(100% - 44.8px) 0, 100% calc(0% + 44.8px), 100% 100%, 0 100%, 0% 50%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        top: 13px;
+        right: 13px;
+        transform: rotate(45deg);
+        border-top: 1.5px solid rgb(145, 145, 145);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        clip-path: polygon(15px 50%, 15px -10px, 15px -10px, 15px -10px, 15px -10px, 15px -10px)
+    }
+
+    40% {
+        clip-path: polygon(15px 50%, 15px -10px, 100% -10px, 100% -10px, 100% -10px, 100% -10px)
+    }
+
+    70% {
+        clip-path: polygon(15px 50%, 15px -10px, 100% -10px, 100% calc(100% + 10px), 100% calc(100% + 10px), 100% calc(100% + 10px))
+    }
+
+    85% {
+        clip-path: polygon(15px 50%, 15px -10px, 100% -10px, 100% calc(100% + 10px), 15px calc(100% + 10px), 15px calc(100% + 10px))
+    }
+
+    100% {
+        clip-path: polygon(15px 50%, 15px -10px, 100% -10px, 100% calc(100% + 10px), 15px calc(100% + 10px), 15px -10px)
+    }
+}
+
+$thresholds: (
+    8: 1350px,
+    7: 1250px,
+    6: 1150px,
+    5: 1050px,
+    4: 950px
+);
+
+@each $i, $threshold in $thresholds {
+    @media screen and (max-width: $threshold) {
+        .redirect_tags>li:nth-child(#{$i}) {
+            display: none;
+        }
+
+        #list_more>ul>li:nth-child(#{$i - 3}) {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 1540px) {
+    .redirect_tags>li:nth-child(9) {
+        display: none;
+    }
+
+    #list_more {
+        display: flex;
+
+        &>ul>li:last-of-type {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .innertopbar_center img,
+    .innertopbar_center .redirect_tags,
+    .innertopbar_right .btn_play_now,
+    .innertopbar_right .sign_in {
+        display: none;
+    }
+
+    .innertopbar_center {
+        position: relative;
+        flex: 1;
+        background: url(../../../public/image/LOL_Logo_2.png);
+        background-size: auto 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .innertopbar_right {
+        right: 0px;
+        min-width: 0px;
+        width: 80px;
+    }
+
+    .innertopbar_right #dehaze {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .intro_banner_front .outerline_banner {
+        display: none;
+    }
+
+    .intro_banner_front {
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 570px;
+    }
+}

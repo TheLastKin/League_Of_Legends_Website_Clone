@@ -1,0 +1,427 @@
+.game_modes_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    width: 90%;
+    height: 400px;
+    z-index: 1;
+}
+.game_modes_container_border{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(245, 222, 179, 0.35);
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 37px) 0, 100% 37px, 100% 100%, 0 100%);
+    &::before{
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        transform: rotate(45deg);
+        border-top: 1px solid rgba(245, 222, 179, 0.5);
+    }
+}
+.game_modes_preview{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -250px;
+    width: 500px;
+    height: 500px;
+}
+.game_modes_choices_v{
+    position: absolute;
+    right: 0px;
+    width: 320px;
+    height: 100%;
+    overflow: hidden;
+}
+.content_game_modes .game_modes_video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 222, 179, 0.5);
+    z-index: 2;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        border-radius: 100%;
+        box-shadow: inset 0px 0px 0px 1px goldenrod;
+        z-index: 1;
+        clip-path: polygon(35% -50%, 60% -50%, 50% 50%, 100% 85%, 100% 100%, 95% 100%, 50% 50%, 5% 100%, 0 100%, 0 85%, 50% 50%);
+        animation: spin 5s infinite;
+    }
+}
+@keyframes spin{
+    0%{
+        clip-path: polygon(35% 0%, 35% 0%, 60% 0%, 60% 0%, 50% 50%, 100% 85%, 100% 100%, 95% 100%, 50% 50%, 5% 100%, 0 100%, 0 85%, 50% 50%);
+        transform: rotate(0deg);
+    }
+    90%{
+        clip-path: polygon(0 25%, 0 0, 100% 0, 100% 25%, 50% 50%, 100% 25%, 100% 100%, 50% 100%, 50% 50%, 50% 100%, 0 100%, 0 25%, 50% 50%);
+        box-shadow: inset 0px 0px 0px 1.5px goldenrod;
+        transform: rotate(360deg);
+    }
+    100%{
+        clip-path: polygon(0 25%, 0 0, 100% 0, 100% 25%, 50% 50%, 100% 25%, 100% 100%, 50% 100%, 50% 50%, 50% 100%, 0 100%, 0 25%, 50% 50%);
+        box-shadow: inset 0px 0px 0px 0px goldenrod;
+        transform: rotate(360deg);
+    }
+}
+.game_modes_video video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.game_modes_preview>span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 222, 179, 0.7);
+    z-index: 4;
+    clip-path: polygon(0 0, 100% 0, 100% calc(50% - 37px), calc(100% - 37px) 50%, 100% calc(50% + 38px), 100% 100%, 0 100%, 0 calc(50% + 38px), 38px 50%, 0 calc(50% - 37px));
+}
+.game_modes_preview>span::before{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    left: -23px;
+    border-top: 1px solid rgba(245, 222, 179, 0.7);
+    border-right: 1px solid rgba(245, 222, 179, 0.7);
+    transform: rotate(45deg);
+}
+.game_modes_preview>span::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    right: -23px;
+    border-bottom: 1px solid rgba(245, 222, 179, 0.7);
+    border-left: 1px solid rgba(245, 222, 179, 0.7);
+    transform: rotate(45deg);
+}
+.game_modes_preview svg{
+    overflow: hidden;
+    position: absolute;
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    z-index: 5;
+    animation: rotate 120s linear infinite;
+    overflow: hidden;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+.game_modes_headings{
+    position: absolute;
+    left: 7%;
+    top: calc(50% - 110px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.game_modes_text{
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+.game_modes_text p{
+    position: absolute;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game_modes_calling{
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.game_modes_description{
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    line-height: 20px;
+}
+.game_modes_choices_v>div{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 320px;
+    height: 70px;
+    top: calc(50% - 40px);
+    transition: 0.6s ease-out;
+}
+.game_modes_choices_v>div>span{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: calc(50% - 25px);
+    background-color: rgb(28, 247, 255);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+}
+.game_modes_choices_v>div:nth-child(n+2)>span{
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+}
+.game_modes_choices_v>div>img{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: calc(50% - 2px);
+    background-size: cover;
+    box-shadow: 0px 0px 0px 2px rgb(28, 247, 255);
+    transition: 0.6s ease 0.3s;
+}
+.game_modes_choices_v>div:hover>img{
+    box-shadow: 0px 0px 0px 3px rgb(28, 247, 255);
+    cursor: pointer;
+}
+.game_modes_choices_v>div:nth-of-type(2){
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.game_modes_choices_v>div:first-of-type>img{
+    width: 100px;
+    height: 100px;
+}
+.game_modes_choices_v>div>p{
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: fit-content;
+    text-transform: uppercase;
+    text-align: end;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    top: calc(50% - 12px);
+    left: 50px;
+}
+.game_modes_choices_v>div:nth-last-of-type(2)>p{
+    top: calc(50% - 5px);
+}
+.game_modes_choices_v>div:first-of-type>p{
+    color: black;
+    font-weight: 600;
+}
+.game_modes_choices_h{
+    position: absolute;
+    display: none;
+    top: 250px;
+}
+.game_modes_choices_h>div{
+    position: relative;
+    left: 110px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    transition: 0.6s ease-out;
+    cursor: pointer;
+}
+.game_modes_choices_h>div:nth-child(-n+2){
+    margin-right: 10px;
+}
+.game_modes_choices_h>div>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 2px rgb(28, 247, 255);
+    transition: 0.6s ease 0.3s;
+    z-index: 1;
+}
+.game_modes_choices_h>div:nth-child(n+2)>img{
+    width: 70px;
+    height: 70px;
+}
+.game_modes_choices_h>div:hover>img{
+    box-shadow: 0px 0px 0px 3px rgb(28, 247, 255);
+}
+.game_modes_choices_h>div>span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 30px);
+    height: 60px;
+    bottom: -45px;
+    background-color: rgb(28, 247, 255);
+}
+.game_modes_choices_h>div:nth-child(n+2)>span{
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+}
+.game_modes_choices_h>div>span>p{
+    position: relative;
+    top: 10px;
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    z-index: 1;
+}
+.gm_image_idle{
+    width: 70px !important;
+    height: 70px !important;
+}
+.gm_image_active{
+    width: 100px !important;
+    height: 100px !important;
+}
+.gm_background_idle{
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    animation: clearBanner 0.3s linear forwards;
+}
+.gm_background_active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation: showBanner 0.3s linear forwards;
+}
+.gm_text_idle{
+    color: white !important;
+    font-weight: normal !important;
+}
+.gm_text_active{
+    color: black !important;
+    font-weight: bold !important;
+}
+.gm_calling_idle{
+    top: -10px;
+    opacity: 0;
+    transition: top 0.6s ease-out, opacity 0.6s ease-out;
+}
+.gm_description_idle{
+    top: 30px;
+    opacity: 0;
+    transition: top 0.6s ease-out, opacity 0.6s ease-out;
+}
+.gm_calling_active{
+    top: 0;
+    opacity: 1;
+    transition: top 0.6s ease-out 0.6s, opacity 0.6s ease-out 0.6s;
+}
+.gm_description_active{
+    top: 20px;
+    opacity: 1;
+    transition: top 0.6s ease-out 0.6s, opacity 0.6s ease-out 0.6s;
+}
+.gm_video_idle{
+    animation: clearVideo 0.6s linear forwards;
+}
+.gm_video_active{
+    animation: showVideo 0.6s linear forwards;
+}
+@keyframes clearVideo{
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+    50%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 0);
+    }
+    100%{
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+}
+@keyframes showVideo{
+    0%{
+        clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%, 0 100%);
+    }
+    50%{
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 0 0);
+    }
+    100%{
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 100% 0);
+    }
+}
+@keyframes clearBanner{
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+    40%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 0);
+    }
+    100%{
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+}
+@keyframes showBanner{
+    0%{
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    }
+    50%{
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@media screen and (max-width:1400px){
+    .content_game_modes>p{
+        display: block;
+    }
+    .content_game_modes>a{
+        display: block;
+    }
+    .game_modes_container>p:nth-last-of-type(n + 3){
+        display: none;
+    }
+    .game_modes_container>a{
+        display: none;
+    }
+}
+@media screen and (max-width:1300px){
+    .game_modes_container{
+        height: 530px;
+    }
+    .game_modes_choices_v{
+        display: none;
+    }
+    .game_modes_choices_h{
+        display: flex;
+    }
+    .game_modes_headings{
+        left: auto;
+        top: -450px;
+    }
+    .game_modes_preview{
+        width: 400px;
+        height: 400px;
+        top: -200px;
+    }
+}
+@media screen and (max-width: 550px){
+    .game_modes_description{
+        width: 90% !important;
+        font-size: 10px;
+    }
+}

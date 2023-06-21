@@ -1,0 +1,171 @@
+*{margin: 0px;}
+.wrapper{
+    width: 100%;
+    height: auto;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #111111;
+    position: fixed;
+    z-index: 10;
+}
+.intro_banner{
+    position: relative;
+    width: 100%;
+    height: 63vh;
+    min-height: 525px;
+    background-color: ivory;
+    z-index: 1;
+}
+.intro_banner_front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 115px;
+    width: 90%;
+    height: 56vh;
+    min-height: 450px;
+    left: 5%;
+    z-index: 3;
+}
+
+.left_heading {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    left: 0px;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-size: 11px;
+    z-index: 5;
+}
+
+.left_heading p{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.articles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background-image: linear-gradient(to top, rgba(245, 245, 245), rgba(255, 255, 255, 0.8)), url("../../../public/image/Grid_Background0000.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+.content_champion{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: calc(100vw*2);
+    min-height: 900px;
+    max-height: 1200px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../../../public/image/Assassin_icon_gray.jpg');
+    background-repeat: no-repeat;
+    background-position-y: 280px;
+    background-position-x: center;
+    background-color: rgb(255, 255, 255);
+}
+.content_skin{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1200px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(222, 251, 253), rgb(131, 229, 236), rgb(14, 14, 14), rgb(14, 14, 14));
+    box-shadow: inset;
+}
+.content_game_modes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: linear-gradient(to bottom, rgb(14, 14, 14), rgba(34, 34, 34, 0.63), rgba(17, 17, 17, 1)), url('../../../public/image/Summoner_Rift_Temple.jpeg');
+}
+.content_get_started{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background-color: #111111;
+}
+.content_game_news{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(to top, rgba(245, 245, 245), rgba(255, 255, 255, 0.8)), url("../../../public/image/Grid_Background0000.jpg");
+}
+.content_footer_intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
+.content_footer_banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background-color: rgb(6, 28, 37);
+}
+.footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    background-color: #111111;
+    z-index: 5;
+}
+@media screen and (max-width: 700px) {
+    .left_heading{
+        display: none;
+    }
+}
+@media screen and (max-width:1000px){
+    .content_game_news{
+        height: 1100px;
+    }
+    .content_get_started{
+        height: calc(100vw + 100px);
+    }
+}
