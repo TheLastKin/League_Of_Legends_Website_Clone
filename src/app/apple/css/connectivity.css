@@ -1,0 +1,254 @@
+.connectivity {
+    position: relative;
+    width: 100%;
+    margin-top: 140px;
+}
+
+.connectivity_detail {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    margin-top: 35px;
+    background-color: #fbfbfb;
+    overflow: hidden;
+
+    &>img:first-of-type {
+        position: absolute;
+        height: 70px;
+        top: calc(50% + 30px);
+        left: -450px;
+    }
+
+    &>img:last-of-type {
+        position: absolute;
+        height: 70px;
+        top: calc(50% - 80px);
+        right: -500px;
+    }
+}
+
+.magsafe {
+    position: absolute;
+    width: fit-content;
+    height: 35px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 100px;
+    left: calc(50% - 50px);
+    animation: fadeIn 0.6s ease-out forwards;
+
+    &>span:first-of-type {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &>span:last-of-type {
+        content: "";
+        position: absolute;
+        top: calc(100% + 3px);
+        width: 1px;
+        height: 0;
+        background-color: black;
+        animation: expandHeight_large 0.6s linear 0.6s forwards;
+    }
+}
+
+.thunderbolt {
+    position: absolute;
+    width: fit-content;
+    height: 35px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: calc(50% + 40px);
+    top: 100px;
+    animation: fadeIn 0.6s ease-out forwards;
+
+    &>span:first-of-type {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &>span:nth-of-type(2) {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 0;
+        background-color: black;
+        top: 100%;
+        animation: expandBox 0.6s linear 0.6s forwards;
+    }
+
+    &>span:last-of-type {
+        content: "";
+        position: absolute;
+        top: calc(100% + 20px);
+        width: 0;
+        height: 0;
+        border: 1px solid black;
+        border-bottom: none;
+        animation: expand 0.6s linear 1.2s forwards;
+    }
+}
+
+.headphone_jack {
+    position: absolute;
+    left: calc(50% - 80px);
+    bottom: 80px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 35px;
+    animation: fadeIn 0.6s ease-out forwards;
+
+    &>span:first-of-type {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &>span:last-of-type {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        width: 1px;
+        height: 0;
+        background-color: black;
+        animation: expandHeight_large 1.2s linear 0.6s forwards;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes expandHeight_large {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 40px;
+    }
+}
+
+@keyframes expandBox {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 20px;
+    }
+}
+
+@keyframes expand {
+    0% {
+        width: 0;
+        height: 1px;
+    }
+
+    50% {
+        width: 80px;
+        height: 1px;
+    }
+
+    100% {
+        width: 80px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .connectivity_detail {
+        height: 420px;
+
+        &>img:first-of-type {
+            height: 50px;
+        }
+
+        &>img:last-of-type {
+            height: 50px;
+        }
+    }
+
+    .magsafe {
+        left: calc(50% - 65px);
+        top: 40px;
+
+        &>span:first-of-type {
+            font-size: 14px;
+        }
+    }
+
+    .thunderbolt {
+        left: calc(50% - 5px);
+        top: 40px;
+        &>span:first-of-type{
+            font-size: 14px;
+        }
+        &>span:last-of-type{
+            transform: scaleX(0.8);
+        }
+    }
+
+    .headphone_jack{
+        left: calc(50% - 50px);
+        bottom: 40px;
+        &>span:first-of-type{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .connectivity_detail{
+        height: 320px;
+        &>img:first-of-type{
+            height: 40px;
+            top: calc(50% + 35px);
+            transform: translateX(-65px);
+        }
+        &>img:last-of-type{
+            height: 40px;
+            top: calc(50% - 35px);
+            transform: translateX(65px);
+        }
+    }
+    .magsafe{
+        height: 20px;
+        top: 60px;
+        left: 150px;
+        &>span:first-of-type{
+            font-size: 12px;
+        }
+    }
+    .thunderbolt{
+        width: 70px;
+        height: 35px;
+        text-align: center;
+        top: 45px;
+        left: 218px;
+        &>span:first-of-type{
+            font-size: 12px;
+        }
+        &>span:last-of-type{
+            transform: scaleX(0.6);
+        }
+    }
+    .headphone_jack{
+        height: 20px;
+        left: 160px;
+        bottom: 20px;
+        &>span:first-of-type{
+            font-size: 12px;
+        }
+    }
+}

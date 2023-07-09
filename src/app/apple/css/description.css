@@ -1,0 +1,75 @@
+.description{
+    position: relative;
+    width: 100%;
+}
+.description>h1{
+    font-size: 70px;
+    letter-spacing: -2px;
+}
+.description>h2{
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    &>span:nth-of-type(2){
+        color: gray;
+    }
+}
+.description>div{
+    margin-top: 25px;
+    &>h3{
+        color: rgb(70, 70, 70);
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+        &>span{
+            color: rgb(201, 73, 51);
+        }
+    }
+    &>span{
+        color: rgb(109, 109, 109);
+        font-size: 18px;
+    }
+}
+.description>div:nth-of-type(3){
+    display: flex;
+    &>a{
+        text-decoration: none;
+        font-size: 18px;
+        color: rgb(26, 108, 216);
+        &>svg{
+            position: relative;
+            top: 4px;
+        }
+    }
+    &>a:first-of-type{
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .description>h1{
+        font-size: 52px;
+    }
+    .description>h2{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .description>h1{
+        font-size: 34px;
+    }
+    .description>h2{
+        font-size: 18px;
+    }
+    .description>div{
+        &>h3{
+            font-size: 16px;
+        }
+        &>span{
+            font-size: 16px;
+        }
+        &>a{
+            font-size: 16px !important;
+        }
+    }
+}

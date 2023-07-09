@@ -1,0 +1,221 @@
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 35px 0;
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.innerfooter {
+    width: calc(100% - 30px);
+    max-width: 980px;
+    padding: 0 15px;
+}
+
+.purchase_benefits {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &>div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: calc(936px / 3);
+        height: auto;
+
+        &>div {
+            width: 200px;
+            height: auto;
+            text-align: center;
+
+            &>svg {
+                width: 60px;
+                height: 60px;
+            }
+
+            &>h3 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            &>p {
+                font-size: 14px;
+                margin: 10px 0 10px 0;
+            }
+
+            &>a {
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration-thickness: 1px;
+                }
+
+                &>svg {
+                    top: 2.5px;
+                }
+            }
+        }
+    }
+}
+
+.explication {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid rgba(122, 122, 122, 0.3);
+    border-bottom: 1px solid rgb(122, 122, 122, 0.3);
+    padding: 15px 0 20px 0;
+    margin-top: 50px;
+
+    &>ul {
+        list-style: decimal;
+        padding: 0 10px;
+        margin: 0;
+
+        &>li {
+            font-size: 11px;
+            color: rgb(122, 122, 122);
+            white-space: pre-wrap;
+        }
+        &>li:nth-of-type(n+2){
+            margin-top: 10px;
+        }
+    }
+
+    &>p {
+        display: block;
+        font-size: 11px;
+        color: rgb(122, 122, 122);
+        margin: 10px 0 0 0;
+    }
+}
+
+.route_tree {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    &>svg:first-of-type {
+        font-size: 17px;
+    }
+
+    &>svg:nth-of-type(n+2) {
+        font-size: 16px;
+        color: rgb(122, 122, 122, 0.3);
+        margin: 0 5px;
+    }
+
+    &>a {
+        position: relative;
+        bottom: 2px;
+        font-size: 12px;
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.redirects {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+
+    &>div {
+        width: 20%;
+
+        &>h5{
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        &>h5:nth-of-type(n+2){
+            margin-top: 15px;
+        }
+
+        &>ul {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0 0 0;
+
+            &>li {
+                margin-top: 3px;
+                &>a {
+                    text-decoration: none;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: black;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.for_retail_store{
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(122, 122, 122, 0.3);
+    &>span{
+        font-size: 12px;
+        color: rgb(122, 122, 122);
+        &>a{
+            color: rgb(26, 108, 216);
+        }
+    }
+}
+.legal{
+    position: relative;
+    margin-top: 10px;
+    &>div:first-of-type{
+        position: relative;
+        width: 100%;
+        &>span{
+            font-size: 12px;
+            color: rgb(122, 122, 122);
+        }
+        &>span:last-of-type{
+            position: absolute;
+            color: black;
+            right: 0;
+        }
+    }
+    &>div:last-of-type{
+        display: flex;
+        flex-wrap: wrap;
+
+        &>a{
+            display: flex;
+            align-items: center;
+            height: 13px;
+            font-size: 12px;
+            color: black;
+            text-decoration: none;
+            margin-top: 5px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        &>a:first-of-type{
+            padding-right: 7.5px;
+        }
+        &>a:nth-of-type(n+2){
+            padding: 0 7.5px;
+            border-left: 1px solid rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .purchase_benefits>div{
+        width: calc((100vw - 30px)/3) !important;
+        min-width: 200px;
+    }
+}

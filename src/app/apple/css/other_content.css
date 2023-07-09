@@ -1,0 +1,651 @@
+.other_content {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.ar {
+    position: relative;
+    display: flex;
+    background-color: #fbfbfb;
+    width: calc(100% - 100px);
+    height: 620px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.ar_left {
+    flex: 1;
+    max-width: 500px;
+    height: fit-content;
+    margin-right: 15px;
+
+    &>img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    &>h1 {
+        display: block;
+        flex: 1;
+        max-width: 380px;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 45px;
+        margin: 15px 0 25px 0;
+    }
+}
+
+.ar_options {
+    position: relative;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 35px;
+
+    &>div {
+        display: flex;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 3px 0.5px gray;
+        cursor: pointer;
+
+        &>span {
+            position: absolute;
+            display: block;
+            width: 85px;
+            text-align: center;
+            bottom: -22px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+    }
+}
+
+.ar_right {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: flex-end;
+
+    &>img {
+        width: auto;
+        height: 530px;
+    }
+}
+
+.accessory_and_design_focus {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 540px;
+    margin-top: 15px;
+
+    &>div {
+        position: relative;
+        width: calc(50% - 7.5px);
+        height: 100%;
+        background-color: #fbfbfb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.accessory {
+    &>h2 {
+        position: absolute;
+        top: 25px;
+        font-weight: 500;
+    }
+
+    &>h1 {
+        position: absolute;
+        top: 50px;
+        display: block;
+        width: 350px;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    &>a {
+        position: absolute;
+        top: 195px;
+        display: block;
+        padding: 5px 14px 6px 14px;
+        border-radius: 22px;
+        background-color: rgb(26, 108, 216);
+        text-decoration: none;
+        font-weight: 400;
+        color: white;
+    }
+
+    &>img {
+        position: absolute;
+        top: 260px;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.design_focus {
+    &>img {
+        position: absolute;
+        top: 80px;
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+    &>h1 {
+        position: absolute;
+        top: 120px;
+        display: block;
+        width: 270px;
+        font-size: 40px;
+        text-align: center;
+        z-index: 5;
+
+        &>span::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 105px;
+            z-index: -1;
+            width: 230px;
+            height: 50px;
+            background-image: url('/image/apple/environment_highlight.png');
+            background-repeat: no-repeat;
+            background-size: 230px 50px;
+        }
+    }
+
+    &>p {
+        position: absolute;
+        top: 290px;
+        display: block;
+        width: 440px;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &>a {
+        position: absolute;
+        top: 430px;
+        font-size: 18px;
+    }
+}
+
+.compare_mac {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1020px;
+    margin-top: 15px;
+    background-color: #fbfbfb;
+
+    &>h1 {
+        position: absolute;
+        top: 35px;
+        font-size: 52px;
+        display: block;
+        width: 600px;
+        text-align: center;
+    }
+
+    &>a {
+        position: absolute;
+        top: 250px;
+    }
+}
+
+.other_macs {
+    position: absolute;
+    top: 340px;
+    display: flex;
+
+    &>div:nth-of-type(n+2){
+        margin-left: 25px;
+    }
+
+    &>div {
+        width: 190px;
+
+        &>img:first-of-type {
+            display: block;
+            width: auto;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        &>img:last-of-type {
+            display: block;
+            width: auto;
+            height: 10px;
+            margin-top: 20px;
+            object-fit: contain;
+        }
+
+        &>div {
+            width: 100%;
+            height: 100px;
+
+            &>h2 {
+                display: block;
+                width: 100%;
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            &>p {
+                display: block;
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+
+        &>p:first-of-type {
+            display: block;
+            margin: 10px 0 0 0;
+            font-size: 12px;
+            height: 15px;
+            color: coral;
+        }
+
+        &>p:nth-of-type(n+2) {
+            margin: 0;
+            display: flex;
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        &>p:nth-of-type(n+6) {
+            height: 25px;
+        }
+
+        &>p:last-of-type {
+            margin-bottom: 15px;
+        }
+
+        &>a:first-of-type {
+            position: relative;
+            padding: 3px 10px 4px 10px;
+            border-radius: 22px;
+            background-color: rgb(26, 108, 216);
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        &>a:nth-of-type(2) {
+            font-size: 14px;
+
+            &:hover {
+                text-decoration-thickness: 1px;
+            }
+
+            &>svg {
+                top: 3px;
+            }
+        }
+    }
+}
+
+.trade_in {
+    position: relative;
+    width: calc(100% - 60px);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbfbfb;
+    margin-top: 15px;
+    padding: 30px;
+}
+
+.trade_in_left {
+    width: 50%;
+    max-width: 450px;
+
+    &>h2 {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &>h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &>p {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 10px 0 15px 0;
+    }
+}
+
+.trade_in_right {
+    margin-left: 10px;
+
+    &>img {
+        width: auto;
+        height: 220px;
+        object-fit: contain;
+    }
+}
+
+.business_and_education {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 680px;
+    margin-top: 15px;
+
+    &>div {
+        position: relative;
+        width: calc(50% - 67.5px);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+
+        &>div {
+            width: 100%;
+            max-width: 450px;
+            color: white;
+            text-align: center;
+
+            &>h1 {
+                font-size: 42px;
+                margin: 0;
+            }
+
+            &>p {
+                display: block;
+                width: 100%;
+                max-width: 450px;
+                font-size: 18px;
+                font-weight: 500px;
+                margin: 10px 0 10px 0;
+            }
+
+            &>a {
+                color: white;
+            }
+        }
+    }
+
+    &>div:first-of-type {
+        background-image: url('/image/apple/business.jpg');
+    }
+
+    &>div:last-of-type {
+        background-image: url('/image/apple/education.jpg');
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ar {
+        height: 520px;
+    }
+
+    .ar_left {
+        max-width: 320px;
+
+        &>img {
+            width: 45px;
+            height: 45px;
+        }
+
+        &>h1 {
+            font-size: 30px;
+        }
+    }
+
+    .ar_right {
+        &>img {
+            height: 420px;
+        }
+    }
+
+    .ar_options {
+        width: 180px;
+
+        &>div {
+            width: 25px;
+            height: 25px;
+
+            &>span {
+                bottom: -15px;
+            }
+        }
+    }
+    .accessory_and_design_focus{
+        height: 440px;
+    }
+    .accessory{
+        &>h2{
+            top: 25px;
+            font-size: 20px;
+        }
+        &>h1{
+            top: 50px;
+            font-size: 28px;
+        }
+        &>a{
+            top: 165px;
+        }
+        &>img{
+            top: 230px;
+        }
+    }
+    .design_focus{
+        
+        &>img{
+            top: 35px;
+        }
+        &>h1{
+            width: 200px;
+            font-size: 28px;
+            top: 70px;
+            &>span::before{
+                left: 12px;
+                top: 76px;
+                width: 170px;
+                background-size: 170px 40px;
+            }
+        }
+        &>p{
+            top: 210px;
+            width: calc(100% - 40px);
+            max-width: 380px;
+            font-size: 16px;
+            padding: 0 20px;
+        }
+        &>a{
+            top: 320px;
+            font-size: 16px;
+        }
+    }
+    .other_macs{
+        &>div{
+            width: 140px;
+            &>img:first-of-type{
+                height: 80px;
+            }
+            & p{
+                font-size: 13px !important;
+            }
+            &>p:nth-of-type(n+2){
+                height: 40px;
+            }
+            &>p:nth-of-type(3){
+                height: 55px;
+            }
+            &>div{
+                &>h2{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 735px) {
+    .ar{
+        height: 800px;
+    }
+    .ar_left{
+        position: absolute;
+        top: 30px;
+        margin: 0;
+
+        &>h1{
+            font-size: 24px;
+            line-height: normal;
+        }
+    }
+    .ar_options{
+        left: 70px;
+    }
+    .ar_right{
+        position: absolute;
+        height: 380px;
+        bottom: 0;
+    }
+    .accessory_and_design_focus{
+        display: block;
+        height: auto;
+        &>div{
+            width: 100%;
+            height: 440px;
+            margin: 0;
+        }
+        &>div:last-of-type{
+            margin-top: 15px;
+        }
+    }
+    .compare_mac{
+        height: 1610px;
+        &>h1{
+            width: 280px;
+            font-size: 26px;
+        }
+        &>a{
+            font-size: 16px;
+            top: 140px;
+        }
+    }
+    .other_macs{
+        justify-content: center;
+        flex-wrap: wrap;
+        top: 220px;
+
+        &>div:nth-of-type(n+2){
+            margin-left: 0;
+        }
+
+        &>div:nth-of-type(n+3){
+            margin-top: 40px;
+        }
+
+        &>div:nth-of-type(2n+1){
+            margin-right: 15px;
+        }
+
+        &>div{
+            width: 160px;
+
+            & p{
+                font-size: 13px !important;
+            }
+            &>img:first-of-type{
+                height: 90px;
+            }
+            &>div{
+                height: 100px;
+                &>h2{
+                    font-size: 26px;
+                }
+            }
+            &>p:nth-of-type(n+2){
+                width: 120px;
+                height: 40px;
+            }
+            &>p:nth-of-type(3){
+                height: 55px;
+            }
+        }
+    }
+    .trade_in{
+        flex-wrap: wrap;
+    }
+    .trade_in_left{
+        width: 100%;
+        &>h2{
+            font-size: 20px;
+            text-align: center;
+        }
+        &>h1{
+            font-size: 26px;
+            text-align: center;
+        }
+        &>p{
+            font-size: 16px;
+            text-align: center;
+            font-weight: normal;
+        }
+        &>a{
+            font-size: 16px;
+            font-weight: normal;
+            text-align: center;
+        }
+    }
+    .trade_in_right{
+        margin-top: 45px;
+        margin-left: 0;
+
+        &>img{
+            height: 160px;
+        }
+    }
+    .business_and_education{
+        height: auto;
+        flex-wrap: wrap;
+
+        &>div{
+            width: calc(100% - 60px);
+            height: 500px;
+            margin: 0;
+            &>div{
+                &>h1{
+                    font-size: 32px;
+                }
+                &>p{
+                    font-size: 18px;
+                }
+                &>a{
+                    font-size: 16px;
+                }
+            }
+        }
+        &>div:nth-of-type(2){
+            margin-top: 15px;
+        }
+    }
+}

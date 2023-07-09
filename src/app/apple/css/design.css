@@ -1,0 +1,118 @@
+.design{
+    position: relative;
+    width: 100%;
+    margin-top: 75px;
+}
+.design_video{
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.design_video>video{
+    width: 100%;
+}
+.design_scheme{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 650px;
+    margin-top: 35px;
+}
+.scheme_left{
+    width: calc(50% - 10px);
+    margin-right: 20px;
+}
+.scheme_top_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(50% - 10px);
+    margin-bottom: 20px;
+    background-color: rgb(251, 251, 251);
+    &>img{
+        width: 60%;
+    }
+}
+.scheme_bottom_left{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(50% - 10px);
+    background-color: rgb(251, 251, 251);
+    &>img{
+        width: 100%;
+    }
+}
+.scheme_right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 10px);
+    background-color: rgb(251, 251, 251);
+    &>img{
+        position: relative;
+        height: 70%;
+        bottom: 25px;
+    }
+}
+.scheme_choices{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &>div{
+        display: flex;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 3px 0.5px gray;
+        margin: 0 10px;
+        cursor: pointer;
+        &>span{
+            position: absolute;
+            bottom: -22px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+    }
+}
+.midnight{
+    background-color: #2e3642;
+}
+.silver{
+    background-color: #7d7e80;
+}
+.spacegray{
+    background-color: #e3e4e6;
+}
+.starlight{
+    background-color: #f0e4d3;
+}
+
+@media screen and (max-width: 735px) {
+    .design_scheme{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .scheme_right{
+        width: 100%;
+    }
+    .scheme_left{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .scheme_bottom_left{
+        height: 100%;
+    }
+    .scheme_top_left{
+        display: none;
+    }
+}

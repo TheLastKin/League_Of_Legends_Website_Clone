@@ -1,0 +1,157 @@
+.content_container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: hidden;
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 3;
+    overflow-y: scroll;
+}
+
+.content_section {
+    width: 100%;
+    max-width: 980px;
+}
+
+.content_section_large{
+    width: calc(100% - 44px);
+    max-width: 1280px;
+    padding: 0 22px;
+}
+
+.filter_space{
+    position: relative;
+    width: 100%;
+    height: calc(880px * 5 + 390px);
+}
+
+#parallax::-webkit-scrollbar{
+    display: none;
+}
+
+.parallax_container {
+    position: absolute;
+    width: 100%;
+    height: 880px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.content_toggle {
+    position: relative;
+}
+
+.toggle_content_button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 4px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out, rotate 0.4s linear;
+    cursor: pointer;
+
+    &>svg {
+        font-size: 24px;
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.headings>h4 {
+    position: relative;
+    top: -5px;
+    opacity: 0;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: top 0.6s ease-out, opacity 0.6s ease-out;
+    margin: 0;
+}
+
+.headings>h1 {
+    position: relative;
+    top: 8px;
+    opacity: 0;
+    font-size: 60px;
+    letter-spacing: -0.5px;
+    margin: 0;
+    transition: top 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.paragraph {
+    margin-top: 35px;
+    font-size: 21px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    color: rgb(122, 122, 122);
+
+    &>strong {
+        color: black;
+    }
+}
+
+.redirect {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: rgb(26, 108, 216);
+    text-decoration: none;
+    margin-top: 15px;
+
+    &:hover {
+        text-decoration: underline 2px;
+        text-underline-offset: 2px;
+    }
+
+    &>svg {
+        position: relative;
+        top: 4px;
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content_section{
+        max-width: 660px;
+    }
+    .headings>h1{
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .content_section{
+        width: 100%;
+        max-width: 400px;
+    }
+    .content_section_large{
+        width: 100%;
+        max-width: 400px;
+    }
+    .headings>h1{
+        font-size: 36px;
+    }
+    .paragraph{
+        font-size: 18px;
+    }
+}
