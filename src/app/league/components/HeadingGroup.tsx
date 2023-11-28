@@ -17,10 +17,10 @@ const HeadingGroup = ({ containerStyle, firstHeadingText, secondHeadingText, thi
     return (
         <div style={containerStyle} className="heading_group">
             <div>
-                <p style={{ ...firstHeadingStyle, color: textColor }}>{firstHeadingText}</p>
-                <p style={{ ...secondHeadingStyle, color: textColor }}>{secondHeadingText}</p>
+                <div style={{ ...firstHeadingStyle, color: textColor }}>{firstHeadingText}</div>
+                <div style={{ ...secondHeadingStyle, color: textColor }}>{secondHeadingText}</div>
             </div>
-            {thirdHeadingText && <p style={{ ...thirdHeadingStyle, color: textColor }}>{thirdHeadingText}</p>}
+            {thirdHeadingText && <div style={{ ...thirdHeadingStyle, color: textColor }}>{thirdHeadingText}</div>}
         </div>
     );
 };

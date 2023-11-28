@@ -1,0 +1,18 @@
+.checkpoint{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.glow{
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+}
+.show_checkpoint{
+    opacity: 1;
+}

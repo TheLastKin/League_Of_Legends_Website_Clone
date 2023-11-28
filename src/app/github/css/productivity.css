@@ -1,0 +1,280 @@
+.productivity{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 20px);
+    height: auto;
+    padding: 0 10px 0 10px;
+    flex-wrap: wrap;
+}
+.briefcase{
+    font-size: 28px;
+    color: white;
+    z-index: 3;
+}
+.copilot_1{
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid #25282e;
+    border-radius: 16px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    &>img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+.copilot_2{
+    position: absolute;
+    right: 100px;
+    top: 250px;
+    width: 450px;
+    height: auto;
+    border-radius: 16px;
+    z-index: 3;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    &>img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+.rotating_circle{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle_big{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    aspect-ratio: 1;
+    max-width: 600px;
+    border-radius: 50%;
+    border: 2px solid #25282e;
+}
+.circle_medium{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid #25282e;
+}
+.circle_small{
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 2px solid #25282e;
+}
+.rotating_dot_1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 1px;
+    height: 350px;
+    transform: rotate(-95deg);
+    animation: rotate1 300s linear infinite;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #25282e;
+        border-radius: 50%;
+        top: -8px;
+    }
+}
+.rotating_dot_2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 1px;
+    height: 220px;
+    transform: rotate(-110deg);
+    animation: rotate2 300s linear infinite;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #25282e;
+        border-radius: 50%;
+        top: -8px;
+    }
+}
+@keyframes rotate1 {
+    100%{
+        transform: rotate(265deg);
+    }
+}
+@keyframes rotate2 {
+    100%{
+        transform: rotate(250deg);
+    }
+}
+.purple_glow{
+    position: absolute;
+    right: -120px;
+    top: 150px;
+    max-width: 900px;
+    aspect-ratio: 1;
+    width: 100%;
+    opacity: 0;
+    background: radial-gradient(circle, #26264a 5%, #26264aa9 15%, #26264a65 40%, transparent 65%);
+    z-index: 1;
+    transition: opacity 0.3s ease-out;
+}
+.github_copilot{
+    opacity: 0;
+    transform: translateX(15px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.copilot_report{
+    position: relative;
+    margin-top: 160px;
+    transform: translateX(15px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
+}
+
+.github_actions{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+.discover_actions{
+    position: absolute !important;
+    bottom: 50px;
+    left: 60px;
+}
+.action_workflow{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    object-fit: contain;
+}
+.codespace_mobile{
+    margin-top: 30px;
+}
+.github_codespace{
+    position: relative;
+    flex: 1;
+    height: 600px;
+    &>.codespace_explain{
+        position: relative;
+        max-width: 360px;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0;
+        &>span:first-child{
+            color: white;
+        }
+        &>span:last-child{
+            color: grey;
+        }
+    }
+    &>.check_out_codespace{
+        position: relative;
+        margin-top: 40px;
+    }
+    &>img{
+        position: absolute;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+}
+.github_mobile{
+    position: relative;
+    flex: 1;
+    height: 600px;
+    &>.mobile_explain{
+        position: relative;
+        max-width: 360px;
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0;
+        &>span:first-child{
+            color: white;
+        }
+        &>span:last-child{
+            color: grey;
+        }
+    }
+    &>.check_out_codespace{
+        position: relative;
+        margin-top: 40px;
+    }
+    &>img{
+        position: absolute;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+}
+.rotating_square{
+    position: absolute;
+    right: 50px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 300s linear infinite;
+    z-index: 1;
+    &>.square{
+        position: absolute;
+        width: 40vw;
+        max-width: 450px;
+        aspect-ratio: 1;
+        border: 1px solid #25282e;
+        &>.circle{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #25282e;
+        }
+        &>.dot{
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #25282e;
+            border-radius: 50%;
+        }
+        &>.dot:nth-child(2){
+            top: -8px;
+            left: -8px;
+        }
+        &>.dot:nth-child(3){
+            top: -8px;
+            right: -8px;
+        }
+        &>.dot:nth-child(4){
+            bottom: -8px;
+            left: -8px;
+        }
+        &>.dot:nth-child(5){
+            bottom: -8px;
+            right: -8px;
+        }
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(-40deg);
+    }
+    100%{
+        transform: rotate(320deg);
+    }
+}

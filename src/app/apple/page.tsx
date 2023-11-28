@@ -23,7 +23,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="content_container">
+        <div className="wrapper">
             <ParallaxContainer />
             <div className="content">
                 <TopBarMenu />

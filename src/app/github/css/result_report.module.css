@@ -1,0 +1,25 @@
+.result_report{
+    position: relative;
+}
+.result_report>div:first-child{
+    width: fit-content;
+    padding: 3px 8px;
+    border-radius: 16px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    color: white;
+    border: 1px solid white;
+}
+.result_report>h1{
+    font-size: 64px;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+}
+.result_report>p{
+    max-width: 420px;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+} 

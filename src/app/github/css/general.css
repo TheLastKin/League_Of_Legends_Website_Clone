@@ -1,0 +1,158 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: hidden;
+    background-color: #0d1117;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.body{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    max-width: 1400px;
+}
+section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+.content_flex{
+    position: relative;
+    flex: 1;
+    height: fit-content;
+}
+.content_dflex{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+.content_left{
+    position: relative;
+    width: calc(50% - 15px);
+    height: fit-content;
+    padding-right: 15px;
+}
+.content_right{
+    position: relative;
+    width: calc(50% - 15px);
+    height: fit-content;
+    padding-left: 15px;
+}
+.card_left{
+    position: relative;
+    flex: 1;
+}
+.card_right{
+    position: relative;
+    flex: 1;
+}
+.p_1{
+    padding: 50px;
+}
+@keyframes scaleFadeIn {
+    0%{
+        transform: scale(0.75);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes scaleFadeOut {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+.marker{
+    position: relative;
+    width: 80px;
+    height: fit-content;
+}
+.branch{
+    position: absolute;
+    width: auto;
+    height: 420px;
+    right: -35px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.background_graphic{
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.linear_purple{
+    background: linear-gradient(transparent, #7C72FF 30%);
+}
+.radial_purple{
+    background: radial-gradient(circle, #26264a 5%, #26264aa9 15%, #26264a2c 40%, transparent 60%);
+}
+.linear_purple_green{
+    background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950);
+}
+.radial_green{
+    background: radial-gradient(circle, #0f661e6c 15%, #0c611a1a 40%, transparent 60%);
+}
+.radial_green_2{
+    background: radial-gradient(circle, rgba(15, 102, 30, 0.4) 5%, rgba(12, 95, 26, 0.1) 40%, transparent 60%);
+}
+.linear_green{
+    background: linear-gradient(rgb(63, 185, 80), rgb(46, 160, 67), transparent);
+}
+.linear_green_center{
+    background: linear-gradient(transparent, rgb(63, 185, 80), rgb(63, 185, 80), transparent);
+}
+.linear_blue_bottom{
+    background: linear-gradient(transparent, #33B3AE 40%);
+}
+.linear_blue{
+    background: linear-gradient(rgb(51, 179, 174) 40%, transparent);
+}
+.radial_blue{
+    background: radial-gradient(circle, rgba(51, 179, 174, 0.2) 15%, rgba(51, 179, 175, 0.05) 40%, transparent 60%);
+}
+.linear_blue_center{
+    background: linear-gradient(transparent, rgb(51, 179, 174), rgb(51, 179, 174), transparent);
+}
+.linear_pink{
+    background: linear-gradient(#F778BA 40%, transparent);
+}
+.linear_pink_bottom{
+    background: linear-gradient(transparent, #F778BA 40%);
+}
+.radial_pink{
+    background: radial-gradient(circle, #f778ba42 15%, #f778ba1a 40%, transparent 60%);
+}
+.linear_pink_center{
+    background: linear-gradient(transparent, #F778BA, #F778BA, transparent);
+}
+.scale_fade_in{
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+.fade_in_right{
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+.fade_in_top{
+    top: 0 !important;
+    opacity: 1 !important;
+}
+.fade_in{
+    opacity: 1 !important;
+}

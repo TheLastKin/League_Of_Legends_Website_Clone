@@ -1,0 +1,10 @@
+.text{
+    font-size: 22px;
+    font-weight: 500;
+    color: grey;
+    max-width: 420px;
+    margin: 0;
+}
+.text>span{
+    color: white;
+}
