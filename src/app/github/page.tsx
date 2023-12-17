@@ -6,6 +6,7 @@ import Campaign from './components/Campaign';
 import Productivity from './components/Productivity';
 import Security from './components/Security';
 import Collaboration from './components/Collaboration';
+import AnimatedGlobe from './components/AnimatedGlobe';
 
 const Home = () => {
     
@@ -21,6 +22,7 @@ const Home = () => {
                 <Productivity/>
                 <Security/>
                 <Collaboration/>
+                <AnimatedGlobe/>
             </div>
         </div>
     );

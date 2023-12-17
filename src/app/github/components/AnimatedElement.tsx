@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 type AnimatedElementProps = {
     children?: any,
+    /** The threshold that triggers the animation when the element is intersecting in the viewport */
     threshold?: number,
     className?: string,
     animatedClassName: string,
